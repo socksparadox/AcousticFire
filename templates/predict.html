@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Prediction</title>
+  <style>
+    .index
+    {
+    margin: 0px;
+    padding:20px;
+    color:black;
+    font-style: bold;
+    border-radius:30px;
+    font-size:25px;
+    }
+    body
+    {
+    background-image: url("https://paytmblogcdn.paytm.com/wp-content/uploads/2023/04/4_Life-Insurance_-What-are-the-Factors-that-Determine-the-Term-Insurance-Premium-Rate-800x500.webp?webp2");
+    background-size: cover;
+    }
+    p
+    {
+    color:black;
+    font-style:italic;
+    font-size:30px;
+    }
+    </style>
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+
+  <!-- Favicons -->
+  <link href="static/img/fire.png" rel="icon">
+  <link href="static/img/fire.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body background="https://upload.wikimedia.org/wikipedia/commons/3/36/Large_bonfire.jpg">
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center header-inner">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+
+      <div id="logo" class="me-auto">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
+        <a href="index.html" class="scrollto"><img src="static/img/logo2.png" height="100" width="100" alt="" title=""></a>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/">About</a></li>
+          <li><a class="nav-link scrollto" href="/">Gallery</a></li>
+          <li><a class="nav-link scrollo" href="/">FAQ</a></li>
+          <li><a class="nav-link scrollto" href="/">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a class="buy-tickets scrollto" href="/detials">Predict</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" class="main-page">
+
+    <!-- ======= Speaker Details Sectionn ======= -->
+    <section id="predict">
+      <div class="container" data-aos="zoom-in">
+        <div class="section-header" >
+          <h2>Prediction</h2>
+          <p>Input the values according to your industry requirements to check if Acoustic Fire Extinguisher is useful in putting the fire out.
+          </p>
+          <p>NOTE: When selecting Fuel type to be LPG, the Sizes are Full Throttle Setting or Half Throttle Setting.</p> 
+          <p>     If any other fuel type is selected Size should be chosen between 7cm - 20cm strictly.
+          </p>
+        </div>
+
+        <form action="{{ url_for('predict')}}"method="post">
+          <center>
+          <label for="SIZE" style="color:white">Size:</label><br>
+          <select id="SIZE" name="SIZE" >
+            <option value="1">7cm</option>
+            <option value="2">12cm</option>
+            <option value="3">14cm</option>
+            <option value="4">16cm</option>
+            <option value="5">20cm</option>
+            <option value="6">Half Throttle Setting</option>
+            <option value="7">Full Throttle Setting</option>
+          </select><br><br>
+
+          <label for="FUEL" style="color:white">Fuel:</label><br>
+          <select id="FUEL" name="FUEL" >
+              <option value="0">Gasoline</option>
+              <option value="3">Thinner</option>
+              <option value="1">Kerosene</option>
+              <option value="2">LPG</option>
+          </select><br><br>
+
+          <label for="DISTANCE" style="color:white">Distance:</label><br>
+          <input type="text" id="DISTANCE" name="DISTANCE" placeholder="Range is from 10-190 in multiples of 10" required="required" style="color:black"/><br><br>
+
+          <label for="DESIBEL" style="color:white">Desibel:</label><br>
+          <input type="text" id="DESIBEL" name="DESIBEL" placeholder="Range is from 72-113 in whole numbers" required="required" style="color:black"/><br><br>
+
+          
+          <label for="AIRFLOW" style="color:white">Airflow:</label><br>
+          <input type="text" id="AIRFLOW" name="AIRFLOW" placeholder="Range is from 0.0-17.0 in single decimal value after point" required="required" style="color:black"/><br><br>
+
+
+          <label for="FREQUENCY" style="color:white">Frequency:</label><br>
+          <input type="text" id="FREQUENCY" name="FREQUENCY" placeholder="Range is from 1-75 in whole numbers" required="required" style="color:black"/><br><br>
+          
+          <button type="submit" class="btn btn-primary btn-block ">Predict</button>
+          </center>
+      </form>
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="static/img/logo2.png" alt="TheEvenet" height="100" width="100" >
+            <p>The cleaner and safer way to put out fire.</p>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Predict</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact" style="color:whitesmoke;">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              Pune, Pune 411048<br>
+              India <br>
+              <strong>Phone:</strong> +91 8888 8888 88<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Acoustic Fire Extinguisher</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
